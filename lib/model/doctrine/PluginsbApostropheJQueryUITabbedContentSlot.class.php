@@ -12,5 +12,5 @@
  */
 abstract class PluginsbApostropheJQueryUITabbedContentSlot extends BasesbApostropheJQueryUITabbedContentSlot
 {
-
+	protected $editDefault = true;
 }
