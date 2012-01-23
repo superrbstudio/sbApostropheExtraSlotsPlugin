@@ -12,5 +12,5 @@
  */
 abstract class PluginsbApostropheFAQSlot extends BasesbApostropheFAQSlot
 {
-
+	protected $editDefault = true;
 }
