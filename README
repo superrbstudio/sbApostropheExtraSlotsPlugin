@@ -3,6 +3,7 @@ sbApostropheExtraSlotsPlugin
 Extra Slots for Apostrophe CMS
 
 sbApostropheJQueryUITabbedContentSlot - A slot to create jQuery UI tabbed content
+sbApostropheFAQSlot - A slot to create a collapsible set of FAQs 
 
 ##################################################
 
