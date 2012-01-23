@@ -14,7 +14,7 @@ function sbApostropheFAQSlotStart() {
 	sbApostropheFAQsRegistered = true;
 	
 	// hide initial
-	$('.sb-ecom-faq-slot-answer').each(function() {
+	$('.sb-apostrophe-faq-slot-answer').each(function() {
 		if(sbApostropheFirstHide == true) {
 			sbApostropheFirstHide = false;
 		} else {
@@ -23,8 +23,8 @@ function sbApostropheFAQSlotStart() {
 	});
 	
 	// listen for clicks on heading
-	$('.sb-ecom-faq-slot-question').click(function() {
-		answer = $(this).parent().find('.sb-ecom-faq-slot-answer');
+	$('.sb-apostrophe-faq-slot-question').click(function() {
+		answer = $(this).parent().find('.sb-apostrophe-faq-slot-answer');
 		if(answer.hasClass('open')) {
 			hideAnswer(answer);
 		} else {
@@ -35,19 +35,21 @@ function sbApostropheFAQSlotStart() {
 	function hideAnswer(answer) {
 		answer.slideUp('slow', 'easeInOutCirc', function() {
 			$(this).removeClass('open');
+			$(this).parent().find('.sb-apostrophe-faq-slot-question').removeClass('open');
 		});
 	}
 	
 	function showAnswer(answer) {
 		answer.slideDown('slow', 'easeInOutCirc', function() {
 			$(this).addClass('open');
+			$(this).parent().find('.sb-apostrophe-faq-slot-question').addClass('open');
 		});
 	}
 	
 }
 
 function sbApostropheFAQsReset() {
-	$('.sb-ecom-faq-slot-question').unbind('click');
+	$('.sb-apostrophe-faq-slot-question').unbind('click');
 	sbApostropheFAQsRegistered = false;
 	sbApostropheFirstHide = true;
 	sbApostropheFAQSlotStart();
