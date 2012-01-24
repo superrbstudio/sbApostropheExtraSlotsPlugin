@@ -5,3 +5,13 @@
     Description:
         Default Styles for sbApostropheExtraSlotsPlugin
 */
+
+.a-ui .a-btn.sbapostrophejqueryuitabbedcontent.icon > .icon, .a-ui.a-btn.sbapostrophejqueryuitabbedcontent.icon > .icon {
+	background-image: url('../images/slot-tabbed-content-icon.png');
+	background-position: top right;
+}
+
+.a-ui .a-btn.sbapostrophefaq.icon > .icon, .a-ui.a-btn.sbapostrophefaq.icon > .icon {
+	background-image: url('../images/slot-faq-icon.png');
+	background-position: top right;
+}
