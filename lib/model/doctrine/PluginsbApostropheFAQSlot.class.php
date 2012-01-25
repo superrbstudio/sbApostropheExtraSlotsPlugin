@@ -13,4 +13,10 @@
 abstract class PluginsbApostropheFAQSlot extends BasesbApostropheFAQSlot
 {
 	protected $editDefault = true;
+	
+	public function getSearchText()
+  {
+		$value = unserialize($this->value);
+		return $value['question'] . ' ' . $value['answer'];
+  }
 }
