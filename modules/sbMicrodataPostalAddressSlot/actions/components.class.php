@@ -1,4 +1,4 @@
 <?php
-class sbMicrodataPostalAddressSlotComponents extends aSlotComponents
+class sbMicrodataPostalAddressSlotComponents extends PluginsbMicrodataPostalAddressComponents
 {
 }
