@@ -16,7 +16,7 @@ abstract class PluginsbJQueryUITabbedContentSlotComponents extends aSlotComponen
     // from an earlier pass
     if (!isset($this->form))
     {
-      $this->form = new sbApostropheJQueryUITabbedContentSlotEditForm($this->id, $this->slot->getArrayValue());
+      $this->form = new sbJQueryUITabbedContentSlotEditForm($this->id, $this->slot->getArrayValue());
     }
   }
   public function executeNormalView()
