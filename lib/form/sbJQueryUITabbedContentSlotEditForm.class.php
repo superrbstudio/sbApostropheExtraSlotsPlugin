@@ -1,4 +1,4 @@
 <?php    
-class sbJQueryUITabbedContentSlotEditForm extends BaseForm
+class sbJQueryUITabbedContentSlotEditForm extends PluginsbJQueryUITabbedContentSlotEditForm
 {
 }

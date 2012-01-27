@@ -5,7 +5,7 @@
  *
  * @author Giles Smith <tech@superrb.com>
  */
-abstract class PluginsbJQueryUITabbedContentSlotEditForm extends sbJQueryUITabbedContentSlotEditForm
+abstract class PluginsbJQueryUITabbedContentSlotEditForm extends BaseForm
 {
 	// Ensures unique IDs throughout the page
   protected $id;
@@ -18,7 +18,7 @@ abstract class PluginsbJQueryUITabbedContentSlotEditForm extends sbJQueryUITabbe
   {
     //@TODO Make this more dynamic rather than a fixed number of fields, guess something js with handling for unexpected fields
 		
-		for($i = 1; $i <= sfConfig::get('app_sbApostropheJQueryUITabbedContent_max_tabs', 5); $i++)
+		for($i = 1; $i <= sfConfig::get('app_sbJQueryUITabbedContent_max_tabs', 5); $i++)
 		{
 			$this->setWidget('title_' . $i, new sfWidgetFormInputText());
 			$this->setValidator('title_' . $i, new sfValidatorString(array('required' => false)));

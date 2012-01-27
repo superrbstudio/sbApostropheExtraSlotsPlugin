@@ -13,7 +13,7 @@ abstract class PluginsbJQueryUITabbedContentSlotActions extends aSlotActions
 
     // Hyphen between slot and form to please our CSS
     $value = $this->getRequestParameter('slot-form-' . $this->id);
-    $this->form = new sbApostropheJQueryUITabbedContentSlotEditForm($this->id, array());
+    $this->form = new sbJQueryUITabbedContentSlotEditForm($this->id, array());
     $this->form->bind($value);
     if ($this->form->isValid())
     {
