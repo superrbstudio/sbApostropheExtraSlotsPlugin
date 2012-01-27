@@ -16,7 +16,7 @@
 		<?php if(isset($values['title_' . $i]) and !empty($values['title_' . $i])): ?>
 			<?php $tabId = 'tabs_' . $permid . '_' . $i; ?>
 	<div id="<?php echo $tabId; ?>">
-		<?php a_slot('tab_content_' . $i, 'aRichText', array('slug' => sbApostropheJQueryUITabbedContentSlotTable::createVirtualPageSlug($pageid, $permid))); ?>
+		<?php a_slot('tab_content_' . $i, 'aRichText', array('slug' => sbJQueryUITabbedContentSlotTable::createVirtualPageSlug($pageid, $permid))); ?>
 	</div>
 		<?php endif; ?>
 	<?php endfor; ?>

@@ -1,5 +1,5 @@
 
-sbApostropheJQueryUITabbedContentSlot:
+sbJQueryUITabbedContentSlot:
   # Doctrine doesn't produce useful forms with column aggregation inheritance anyway,
   # and slots often use serialization into the value column... the Doctrine forms are not
   # of much use here and they clutter the project
@@ -21,7 +21,7 @@ sbApostropheJQueryUITabbedContentSlot:
     extends: aSlot
     type: column_aggregation
     keyField: type
-    keyValue: 'sbApostropheJQueryUITabbedContent'
+    keyValue: 'sbJQueryUITabbedContent'
 
 sbFAQSlot:
   # Doctrine doesn't produce useful forms with column aggregation inheritance anyway,

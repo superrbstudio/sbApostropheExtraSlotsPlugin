@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Description of PluginsbApostropheJQueryUITabbedContentSlotComponents
+ * Description of PluginsbMicrodataPostalAddressComponents
  *
  * @author Giles Smith <tech@superrb.com>
  */
-abstract class PluginsbApostropheJQueryUITabbedContentSlotComponents extends aSlotComponents
+class PluginsbMicrodataPostalAddressComponents extends aSlotComponents
 {
 	public function executeEditView()
   {
@@ -16,7 +16,7 @@ abstract class PluginsbApostropheJQueryUITabbedContentSlotComponents extends aSl
     // from an earlier pass
     if (!isset($this->form))
     {
-      $this->form = new sbApostropheJQueryUITabbedContentSlotEditForm($this->id, $this->slot->getArrayValue());
+      $this->form = new sbMicrodataPostalAddressSlotEditForm($this->id, $this->slot->getArrayValue());
     }
   }
   public function executeNormalView()
@@ -25,5 +25,3 @@ abstract class PluginsbApostropheJQueryUITabbedContentSlotComponents extends aSl
     $this->values = $this->slot->getArrayValue();
   }
 }
-
-?>

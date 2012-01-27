@@ -1,11 +1,16 @@
 <?php
 
-/**
- * Description of PluginsbApostropheJqueryUITabbedContentSlotActions
- *
- * @author Giles Smith <tech@superrb.com>
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
-abstract class PluginsbApostropheJQueryUITabbedContentSlotActions extends aSlotActions
+
+/**
+ * Description of PluginsbMicrodataPostalAddressActions
+ *
+ * @author pureroon
+ */
+abstract class PluginsbMicrodataPostalAddressActions extends aSlotActions
 {
 	public function executeEdit(sfRequest $request)
   {
@@ -13,7 +18,7 @@ abstract class PluginsbApostropheJQueryUITabbedContentSlotActions extends aSlotA
 
     // Hyphen between slot and form to please our CSS
     $value = $this->getRequestParameter('slot-form-' . $this->id);
-    $this->form = new sbApostropheJQueryUITabbedContentSlotEditForm($this->id, array());
+    $this->form = new sbMicrodataPostalAddressSlotEditForm($this->id, array());
     $this->form->bind($value);
     if ($this->form->isValid())
     {
@@ -34,5 +39,3 @@ abstract class PluginsbApostropheJQueryUITabbedContentSlotActions extends aSlotA
     }
   }
 }
-
-?>

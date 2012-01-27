@@ -1,4 +1,0 @@
-<?php
-class sbApostropheJQueryUITabbedContentSlotActions extends PluginsbApostropheJQueryUITabbedContentSlotActions
-{
-}  

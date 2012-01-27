@@ -1,7 +1,13 @@
-<?php    
-class sbApostropheJQueryUITabbedContentSlotEditForm extends BaseForm
+<?php
+
+/**
+ * Description of PluginsbJQueryUITabbedContentSlotEditForm
+ *
+ * @author Giles Smith <tech@superrb.com>
+ */
+abstract class PluginsbJQueryUITabbedContentSlotEditForm extends sbJQueryUITabbedContentSlotEditForm
 {
-  // Ensures unique IDs throughout the page
+	// Ensures unique IDs throughout the page
   protected $id;
   public function __construct($id, $defaults = array(), $options = array(), $CSRFSecret = null)
   {
