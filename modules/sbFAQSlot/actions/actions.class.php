@@ -1,5 +1,5 @@
 <?php
-class sbApostropheFAQSlotActions extends aSlotActions
+class sbFAQSlotActions extends aSlotActions
 {
   public function executeEdit(sfRequest $request)
   {

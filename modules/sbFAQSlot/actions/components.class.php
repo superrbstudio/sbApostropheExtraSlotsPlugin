@@ -1,5 +1,5 @@
 <?php
-class sbApostropheFAQSlotComponents extends aSlotComponents
+class sbFAQSlotComponents extends aSlotComponents
 {
   public function executeEditView()
   {
