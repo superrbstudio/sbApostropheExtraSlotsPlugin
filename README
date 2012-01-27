@@ -1,9 +1,11 @@
 sbApostropheExtraSlotsPlugin
 
 Extra Slots for Apostrophe CMS
+- sbApostropheJQueryUITabbedContentSlot - A slot to create jQuery UI tabbed content
+- sbApostropheFAQSlot - A slot to create a collapsible set of FAQs 
 
-sbApostropheJQueryUITabbedContentSlot - A slot to create jQuery UI tabbed content
-sbApostropheFAQSlot - A slot to create a collapsible set of FAQs 
+MicroData Slots:
+- sbMicrodataPostalAddressSlot - a slot to create contact details using HTML5 Microdata.
 
 ##################################################
 
