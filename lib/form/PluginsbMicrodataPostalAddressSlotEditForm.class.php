@@ -21,7 +21,7 @@ abstract class PluginsbMicrodataPostalAddressSlotEditForm extends BaseForm
   }
   public function configure()
   {
-    $this->setWidget('description', new sfWidgetFormInputText());
+    $this->setWidget('description', new sfWidgetFormTextarea());
 		$this->setValidator('description', new sfValidatorString(array('required' => false)));
 		
 		$this->setWidget('name', new sfWidgetFormInputText());
