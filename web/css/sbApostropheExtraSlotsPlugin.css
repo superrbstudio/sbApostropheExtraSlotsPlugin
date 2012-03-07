@@ -15,3 +15,107 @@
 	background-image: url('../images/slot-faq-icon.png');
 	background-position: top right;
 }
+
+/** Styles for the countdown timer */
+
+/* Clock container */
+.sbJQueryCountdownTimer .time {
+	font-size: 3.2em;
+	font-weight: bold;
+	list-style: none;
+	margin: 0;
+  padding: 0;
+  color: #e6e6e6;
+}
+
+.sbJQueryCountdownTimer .time li {
+	float: left;
+	width: 72px;
+	height: 79px;
+	position: relative;
+	-webkit-perspective: 200;
+	-moz-perspective: 200;
+}
+
+.sbJQueryCountdownTimer .time div.card {
+	background: #444;
+	padding: 10px 0;
+	color: #e6e6e6;
+	width: 72px;
+  height: 59px;
+	text-align: center;
+	position: relative;
+  background: url('../images/countdown-flipper.png') no-repeat;
+
+}
+
+.sbJQueryCountdownTimer .time div.card > .break {
+  background: rgba(0,0,0, 0.2);
+  box-shadow: 0 -1px 2px rgba(0,0,0, 0.2);
+  border-bottom: 1px solid #666;
+  height: 1px;
+  width: 62px;
+  position: absolute;
+  top: 34px;
+  left: 5px;
+}
+
+.sbJQueryCountdownTimer .time .change {
+	position: absolute;
+	top: 0;
+	height: 60px;
+	z-index: 2;
+	-webkit-transition: all .4s ease-in;
+	-webkit-transform: rotateX(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all .4s ease-in;
+	-moz-transform: rotateX(0deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+}
+
+.sbJQueryCountdownTimer .time .top .card {
+	height: 14px;
+	overflow: hidden;
+  background: url('../images/countdown-flipper.png') no-repeat;
+}
+
+.sbJQueryCountdownTimer .time .change.bottom {
+	top: 0;
+	padding-top: 36px;
+	height: 35px;	
+	-webkit-transition: all .4s ease-out;
+	-webkit-transition-delay: .2s;
+	-webkit-transform: rotateX(270deg);
+	-moz-transition: all .4s ease-out;
+	-moz-transition-delay: .2s;
+	-moz-transform: rotateX(270deg);
+}
+
+.sbJQueryCountdownTimer .time .change.flip {
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	top: 5px;
+}
+
+.sbJQueryCountdownTimer .time .change.bottom.flip {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	top: 0;
+}
+
+.sbJQueryCountdownTimer .time .change .bottom {
+	overflow: hidden; 
+	height: 35px;
+}
+
+.sbJQueryCountdownTimer .time .bottom .card {
+	margin-top: -36px;
+}
+
+.sbJQueryCountdownTimer .time .new-top {
+	position: absolute;
+	top: 0;
+	z-index:  1;
+}
