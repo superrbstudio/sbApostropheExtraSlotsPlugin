@@ -76,7 +76,7 @@
 }
 
 .sbJQueryCountdownTimer .time .top .card {
-	height: 14px;
+	height: 15px;
 	overflow: hidden;
   background: url('../images/countdown-flipper.png') no-repeat;
 }
@@ -118,4 +118,19 @@
 	position: absolute;
 	top: 0;
 	z-index:  1;
+}
+
+.sbJQueryCountdownTimer .countdown-labels {
+  clear: both;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+.sbJQueryCountdownTimer .countdown-labels li {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 72px;
 }

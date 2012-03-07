@@ -37,5 +37,9 @@ class PluginsbJQueryCountdownTimerSlotComponents extends aSlotComponents
     }
     
     // check the date hasn't passed
+    if($this->date <= time())
+    {
+      $this->date = null;
+    }
   }
 }

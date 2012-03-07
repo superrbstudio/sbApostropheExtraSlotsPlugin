@@ -4,9 +4,9 @@
 
 
 <?php if(isset($date) and $date != null): ?>
-<div class="countdown">
+<div class="countdown clearfix">
   <div class="layer"></div>
-  <ul class="time">
+  <ul class="time clearfix">
     <li id="d1">
       <div class="current card">
         <span class="value"></span>
@@ -31,6 +31,12 @@
         <div class="break"></div>
       </div>
     </li>
+  </ul>
+  <ul class="countdown-labels">
+    <li>Days</li>
+    <li>Hours</li>
+    <li>Minutes</li>
+    <li>Seconds</li>
   </ul>
 </div>
 
