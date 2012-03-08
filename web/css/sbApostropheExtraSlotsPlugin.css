@@ -134,3 +134,26 @@
   float: left;
   width: 72px;
 }
+
+.sbJQueryCountdownTimer div.start_date, .a-ui.a-admin-sidebar .section.event-date div.end_date {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+.sbJQueryCountdownTimer .a-ui.a-admin-sidebar {
+  float: none;
+  width: 100%;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+  -opera-box-shadow: 0 0 0 rgba(0,0,0,0);
+  -khtml-box-shadow: 0 0 0 rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
