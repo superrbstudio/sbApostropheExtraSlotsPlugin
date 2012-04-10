@@ -16,6 +16,10 @@
 	background-position: top right;
 }
 
+.a-ui .a-btn.sbjquerycountdowntimer.icon > .icon, .a-ui.a-btn.sbjquerycountdowntimer.icon > .icon {
+	background-position: -20px -1500px;
+}
+
 /** Styles for the countdown timer */
 
 /* Clock container */
