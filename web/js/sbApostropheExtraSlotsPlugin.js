@@ -55,36 +55,34 @@ function sbApostropheFAQsReset() {
 	sbApostropheFAQSlotStart();
 }
 
-var sbCountdownTimerHolder = null;
+var sbCountdownTimerHolder = Array();
+var sbCountdownFutureDate  = Array();
 
-function sbJQueryCountdownTimerSetup(year, month, day, hour, minute) {
+function sbJQueryCountdownTimerSetup(elementId, year, month, day, hour, minute) {
   
-  var futureDate = new Date(year, month, day, hour, minute);
-  clearInterval(sbCountdownTimerHolder);
-  sbCountdownTimerHolder = null;
+  sbCountdownFutureDate[elementId] = new Date(year, month, day, hour, minute);
+  clearInterval(sbCountdownTimerHolder[elementId]);
+  sbCountdownTimerHolder[elementId] = null;
   
-  function updateTime() {
-    // Get the current time and work out 12 hour time
+  
+  function updateTime(elementId) {
+    // Get the current time
     var date = new Date();
-    var hour24 = date.getHours();
-    var hour12 = (hour24 != 0 && hour24 != 12) ? (hour24 % 12) : 12;
-    var meridiem = (hour24 < 12) ? 'am' : 'pm';
     
     // get difference between the 2 dates
-    var seconds = (futureDate.getTime() - date.getTime()) / 1000; 
+    var seconds = (sbCountdownFutureDate[elementId].getTime() - date.getTime()) / 1000; 
     
     // Update the clock elements
-    changeValue($('#d1'), Math.floor(seconds / 86400));
-    changeValue($('#m2'), Math.floor((seconds % 86400) / 3600));
-    changeValue($('#s1'), Math.floor(((seconds % 86400) % 3600) / 60));
-    changeValue($('#s2'), Math.floor(((seconds % 86400) % 3600) % 60));
-    $('#ampm').html(meridiem);
+    changeValue($(elementId + ' .d1'), Math.floor(seconds / 86400));
+    changeValue($(elementId + ' .m2'), Math.floor((seconds % 86400) / 3600));
+    changeValue($(elementId + ' .s1'), Math.floor(((seconds % 86400) % 3600) / 60));
+    changeValue($(elementId + ' .s2'), Math.floor(((seconds % 86400) % 3600) % 60));
   }
 
   // Update the time straight away
-  if(sbCountdownTimerHolder == null) {
-    updateTime();
-    sbCountdownTimerHolder = window.setInterval(updateTime, 1000);
+  if(sbCountdownTimerHolder[elementId] == null) {
+    updateTime(elementId);
+    sbCountdownTimerHolder[elementId] = window.setInterval(function() {updateTime(elementId)}, 1000);
   }
 
   // Earlier code to play with increment/decrementing numbers

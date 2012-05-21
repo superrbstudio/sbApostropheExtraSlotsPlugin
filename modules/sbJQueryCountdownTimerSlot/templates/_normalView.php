@@ -4,28 +4,28 @@
 
 
 <?php if(isset($date) and $date != null): ?>
-<div class="countdown clearfix">
+<div class="countdown clearfix" id="sbCountdown<?php echo $permid; ?>">
   <div class="layer"></div>
   <ul class="time clearfix">
-    <li id="d1">
+    <li class="d1">
       <div class="current card">
         <span class="value"></span>
         <div class="break"></div>
       </div>
     </li>
-    <li id="m2">
+    <li class="m2">
       <div class="current card">
         <span class="value"></span>
         <div class="break"></div>
       </div>
     </li>
-    <li id="s1">
+    <li class="s1">
       <div class="current card">
         <span class="value"></span>
         <div class="break"></div>
       </div>
     </li>
-    <li id="s2">
+    <li class="s2">
       <div class="current card">
         <span class="value"></span>
         <div class="break"></div>
@@ -41,5 +41,5 @@
 </div>
 
 <?php // Remember javascript months start from 0!!! ?>
-<?php a_js_call('sbJQueryCountdownTimerSetup(?,?,?,?,?)', date('Y', $date), date('m', $date) - 1, date('d', $date), date('H', $date), date('m', $date)); ?>
+<?php a_js_call('sbJQueryCountdownTimerSetup(?,?,?,?,?,?)', '#sbCountdown' . $permid, date('Y', $date), date('m', $date) - 1, date('d', $date), date('H', $date), date('i', $date)); ?>
 <?php endif; ?>
