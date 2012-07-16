@@ -20,6 +20,10 @@
 	background-position: -20px -1500px;
 }
 
+.a-ui .a-btn.sbvideowithimage.icon > .icon, .a-ui.a-btn.sbvideowithimage.icon > .icon {
+	background-position: -20px -1500px;
+}
+
 /** Styles for the countdown timer */
 
 /* Clock container */
