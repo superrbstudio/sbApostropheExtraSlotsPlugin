@@ -17,6 +17,7 @@
   // Defaults true for backwards compatibility
   $stretch16x9 = isset($stretch16x9) ? $sf_data->getRaw('stretch16x9') : true;
   $thumbnailImage = isset($thumbnailImage) ? $sf_data->getRaw('thumbnailImage') : null;
+  $thumbnailImageId = isset($thumbnailImageId) ? $sf_data->getRaw('thumbnailImageId') : null;
   
   if($thumbnailImage)
   {
@@ -51,12 +52,13 @@
           a_(sfConfig::get('app_aMedia_video_and_embed') ? 'Select Video or Embed Code' : 'Select a Video')), 'class' => 'a-btn icon a-media', 'type' => 'video', 'constraints' => $constraints, 'itemId' => $itemId, 'name' => $name, 'slug' => $slug, 'permid' => $permid)) ?>
       
       <?php include_partial('aImageSlot/choose', array('action' => 'sbVideoWithImageSlot/image', 'buttonLabel' => $thumbTitle, 
-        'label' => $thumbTitle, 'class' => 'a-btn icon a-media', 'type' => 'image', 'constraints' => $constraints, 'itemId' => $itemId, 'name' => $name, 'slug' => $slug, 'permid' => $permid)) ?>
+        'label' => $thumbTitle, 'class' => 'a-btn icon a-media', 'type' => 'image', 'constraints' => $constraints, 'itemId' => $thumbnailImageId, 'name' => $name, 'slug' => $slug, 'permid' => $permid)) ?>
 
-			<?php include_partial('a/variant', array('pageid' => $pageid, 'name' => $name, 'permid' => $permid, 'slot' => $slot)) ?>	
   <?php end_slot() ?>
 
 <?php endif ?>
+
+<p>This is the slot</p>
 
 <?php if (!$item): ?>
 	<?php include_partial('aImageSlot/placeholder', array('placeholderText' => a_(sfConfig::get('app_aMedia_video_and_embed') ? 'Add Video or Embed Code' : 'Add a Video'), 'options' => $options)) ?>

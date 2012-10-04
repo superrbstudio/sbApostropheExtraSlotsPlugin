@@ -39,7 +39,7 @@ class PluginsbVideoWithImageSlotComponents extends BaseaVideoSlotComponents
     else
     {
       foreach($this->slot->MediaItems as $mediaItem)
-      {
+      { 
         if($mediaItem->type == 'video')
         {
           $this->item = $mediaItem;
@@ -73,7 +73,7 @@ class PluginsbVideoWithImageSlotComponents extends BaseaVideoSlotComponents
         if($mediaItem->type == 'image')
         {
           $this->thumbnailImage = $mediaItem;
-          $this->thumnnailImageId = $this->thumbnailImage->id;
+          $this->thumbnailImageId = $this->thumbnailImage->id;
         }
       }
       
