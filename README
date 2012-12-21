@@ -1,8 +1,11 @@
 sbApostropheExtraSlotsPlugin
 
 Extra Slots for Apostrophe CMS
-- sbJQueryUITabbedContentSlot - A slot to create jQuery UI tabbed content
+- sbCampaignMonitorSubscribeSlot - A slot to allow automatic subscriptions to Campaign monitor lists
 - sbFAQSlot - A slot to create a collapsible set of FAQs 
+- sbJQueryCountdownTimeSlot - A slot to show an animated countdown to a fixed date time.
+- sbJQueryUITabbedContentSlot - A slot to create jQuery UI tabbed content
+- sbVideoWithImageSlot - A Video slot with an attached image. Use case: A video in a blog the image will be used on blog index and slots.
 
 MicroData Slots:
 - sbMicrodataPostalAddressSlot - a slot to create contact details using HTML5 Microdata.

@@ -1,0 +1,7 @@
+sb_campaign_monitor_subscribe_display_form:
+  url: /sb-campaign-monitor-subscribe/display-form
+  param: { module: sbCampaignMonitorSubscribe, action: displayForm }
+  
+sb_campaign_monitor_subscribe_process_form:
+  url: /sb-campaign-monitor-subscribe/process-form
+  param: { module: sbCampaignMonitorSubscribe, action processForm }

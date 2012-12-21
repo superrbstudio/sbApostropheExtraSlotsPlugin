@@ -129,3 +129,31 @@ function sbJQueryCountdownTimerSetup(elementId, year, month, day, hour, minute) 
 
   }
 }
+
+function sbCampaignMonitorSubscribe(listId, displayElement, displayUrl) {
+	
+	$(displayElement).on("submit", '.sb-campaign-monitor-form', function(event){
+		$(displayElement).addClass('sb-loading');
+		event.preventDefault();
+		
+		$.ajax({
+    	url: $(this).attr('action'),
+    	data: $(this).serialize(),
+    	method: 'POST',
+    	success: function(postData) {
+	    	$(displayElement).html(postData);
+		    $(displayElement).removeClass('sb-loading');
+    	}
+  	});
+	});
+
+	$.ajax({
+	  url: displayUrl,
+	  data: { 'list_id': listId },
+	  method: 'POST',
+	  success: function(data) {
+	    $(displayElement).removeClass('sb-loading');
+	    $(displayElement).append(data);
+	  }
+	});
+}
