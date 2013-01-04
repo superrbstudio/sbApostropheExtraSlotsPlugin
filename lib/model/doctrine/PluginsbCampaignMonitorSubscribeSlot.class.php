@@ -12,5 +12,5 @@
  */
 abstract class PluginsbCampaignMonitorSubscribeSlot extends BasesbCampaignMonitorSubscribeSlot
 {
-
+  protected $editDefault = true;
 }
